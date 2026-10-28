@@ -14,7 +14,7 @@ FROM
 WHERE 
     delivery_id LIKE '%20260930%'
     AND moisture_pct NOT BETWEEN 10.0 AND 12.0;
-
+ 
 /*
     analysis_id     |     delivery_id     | moisture_pct | yield_factor | cup_score |    analyst_name    |                          observations
 --------------------+---------------------+--------------+--------------+-----------+--------------------+-----------------------------------------------------------------

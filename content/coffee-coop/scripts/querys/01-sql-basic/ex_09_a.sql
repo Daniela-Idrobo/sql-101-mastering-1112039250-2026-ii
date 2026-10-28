@@ -14,7 +14,7 @@ WHERE
     AND cup_score >= 85
 ORDER BY 
     cup_score DESC;
-
+ 
 /*
       analysis      |      delivery       | moisture_pct | yield_factor | cup_score
 --------------------+---------------------+--------------+--------------+-----------
