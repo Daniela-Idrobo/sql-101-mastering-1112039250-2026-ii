@@ -1,9 +1,6 @@
 -- Exercise 09 - c
 -- Quality analyses: unaccepted analyses on Sept 30, 2026 with registered observations, ordered by defect percentage descending
 
--- Exercise 09 - c
--- Quality analyses: unaccepted analyses on Sept 30, 2026 with registered observations, ordered by defect percentage descending
-
 SELECT
     analysis_id,
     delivery_id,
@@ -32,3 +29,6 @@ ORDER BY
  QA-20260930-000018 | DLV-20260930-000006 | f           |        7.88 | Café con humedad alta, requiere más secado. | Nicolás Serrano
 (7 filas)
 */
+
+
+git add content/coffee-coop/scripts/querys/01-sql-basic/ex_02_a.sql

@@ -15,5 +15,5 @@ ORDER BY
  municipality_code | municipality
 -------------------+--------------
  54518             | Pamplona
-(1 fila)
+(1 fila)  
 */
