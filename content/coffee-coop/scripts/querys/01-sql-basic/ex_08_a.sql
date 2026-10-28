@@ -13,7 +13,7 @@ FROM
 WHERE 
     delivery_id LIKE '%20260930%'
 ORDER BY 
-    delivered_at ASC;
+    delivered_at ASC; 
 
 /*
      delivery_id     | farm_id | collection_point_id |    delivered_at     |  coffee_type  | gross_weight_kg

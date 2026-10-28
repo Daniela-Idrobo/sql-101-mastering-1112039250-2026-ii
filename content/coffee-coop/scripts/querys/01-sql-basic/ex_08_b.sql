@@ -14,7 +14,7 @@ FROM
 WHERE 
     delivery_id LIKE '%20260930%'
     AND status = 'Rechazada';
-
+ 
 /*
  delivery_id | farm_id | collection_point_id | status | bag_count | gross_weight_kg | avg kg per bag
 -------------+---------+---------------------+--------+-----------+-----------------+----------------

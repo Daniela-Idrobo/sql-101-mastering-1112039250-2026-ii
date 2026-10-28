@@ -17,7 +17,7 @@ WHERE
     AND coffee_type IN ('wet parchment', 'cherry')
 ORDER BY 
     gross_weight_kg DESC;
-
+ 
 /*
      delivery_id     | farm_id | collection_point_id |    delivered_at     | coffee_type | bag_count | gross_weight_kg |  status
 ---------------------+---------+---------------------+---------------------+-------------+-----------+-----------------+----------
