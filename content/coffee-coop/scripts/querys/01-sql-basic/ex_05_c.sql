@@ -50,5 +50,5 @@ WHERE
  Punto de Compra Turbo 2        | Calle 36 # 12-19       | 05837             |              | t
  Punto de Compra Villa Rica 1   | Diagonal 6 # 8-43      | 19845             |              | t
  Punto de Compra Coello 1       | Transversal 20 # 49-66 | 73200             |              | t
-(34 filas)
+(34 filas) 
 */

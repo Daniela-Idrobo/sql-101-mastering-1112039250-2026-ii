@@ -22,5 +22,5 @@ WHERE
  Punto de Compra Rionegro 1 | Carrera 31 # 59-80 | 68615
  Punto de Compra Ulloa 1    | Calle 15 # 3-50    | 76845
  Punto de Compra Nátaga 1   | Diagonal 30 # 7-59 | 41483
-(9 filas)
+(9 filas) 
 */
