@@ -2,7 +2,7 @@
 -- Municipalities: municipalities in Norte de Santander starting with 'San'
 
 SELECT
-    municipality_code AS municipality_code,
+    municipality_code,
     municipality_name AS municipality
 FROM 
     geo.municipalities 

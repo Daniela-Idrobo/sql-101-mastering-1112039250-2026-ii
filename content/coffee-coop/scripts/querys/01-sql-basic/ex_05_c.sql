@@ -4,9 +4,9 @@
 SELECT
     point_name AS point,
     address_line AS address,
-    municipality_code AS municipality_code,
-    phone_number AS phone_number,
-    is_active AS is_active
+    municipality_code,
+    phone_number,
+    is_active
 FROM 
     buy.collection_points
 WHERE 

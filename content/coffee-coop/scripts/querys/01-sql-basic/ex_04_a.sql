@@ -2,7 +2,7 @@
 -- Municipalities: code and name of municipalities in Norte de Santander ordered alphabetically
 
 SELECT
-    municipality_code AS municipality_code,
+    municipality_code,
     municipality_name AS municipality
 FROM 
     geo.municipalities

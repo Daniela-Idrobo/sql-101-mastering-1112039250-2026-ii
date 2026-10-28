@@ -4,7 +4,7 @@
 SELECT
     point_name AS point,
     address_line AS address,
-    municipality_code AS municipality_code
+    municipality_code
 FROM 
     buy.collection_points
 WHERE 

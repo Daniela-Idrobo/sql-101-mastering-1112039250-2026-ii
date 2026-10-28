@@ -2,7 +2,7 @@
 -- Municipalities: municipalities nationwide containing the word 'Pamplona' case-insensitively
 
 SELECT
-    municipality_code AS municipality_code,
+    municipality_code,
     municipality_name AS municipality
 FROM 
     geo.municipalities

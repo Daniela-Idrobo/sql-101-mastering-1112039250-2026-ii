@@ -3,8 +3,8 @@
 
 SELECT
     variety_name AS variety,
-    species AS species,
-    description AS description
+    species,
+    description
 FROM 
     farm.coffee_varieties
 WHERE 
