@@ -2,18 +2,18 @@
 -- Farmers: inactive associates in municipality 54518 ordered by affiliation date (oldest to newest)
 
 SELECT
-    document_number AS document,
-    first_name,
-    last_name,
-    membership_date,
-    is_active
+    T1.document_number AS document,
+    T1.first_name,
+    T1.last_name,
+    T1.affiliation_date,
+    T1.is_active
 FROM 
-    farm.farmers
+    farm.farmers T1
 WHERE 
-    municipality_code = '54518'
-    AND is_active = FALSE
+    T1.municipality_code = '54518'
+    AND T1.is_active = FALSE
 ORDER BY 
-    membership_date;
+    T1.affiliation_date;
 
 /*
   document  |    first_name    |     last_name      | membership_date | is_active
@@ -28,16 +28,5 @@ ORDER BY
  10424994   | Cristian         | Herrera Zuluaga    | 2010-04-28      | f
  1015411133 | Santiago         | Bermúdez Ruiz      | 2010-11-30      | f
  1090968710 | Ruth             | Rodríguez Pérez    | 2010-12-11      | f
- 974842644  | Arturo           | Hernández Uribe    | 2012-06-16      | f
- 1001030458 | Liliana Luisa    | Chamorro Vélez     | 2013-01-09      | f
- 870240973  | Jairo            | Molina Pabón       | 2014-03-13      | f
- 89157555   | Heriberto        | Jiménez Cáceres    | 2014-07-17      | f
- 333176982  | Edilma           | Rivera Rivera      | 2014-12-20      | f
- 587550249  | Gustavo          | Mosquera López     | 2016-05-14      | f
- 718906996  | Nelson           | Bedoya Vélez       | 2016-12-09      | f
- 1117597835 | Cecilia Lorena   | Díaz García        | 2017-01-11      | f
- 599185252  | Efraín           | Pinzón Cabrera     | 2017-07-23      | f
- 135734682  | Diego            | Rivera Jiménez     | 2018-03-26      | f
- 914044314  | Ancízar Cristian | Polanía Delgado    | 2021-02-24      | f
 (21 filas)
 */
