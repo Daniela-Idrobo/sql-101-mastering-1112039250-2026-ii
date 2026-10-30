@@ -2,13 +2,13 @@
 -- Coffee varieties: name, species, and description of rust-resistant varieties
 
 SELECT
-    variety_name AS variety,
-    species,
-    description
+    T1.variety_name AS variety,
+    T1.species,
+    T1.description
 FROM 
-    farm.coffee_varieties
+    farm.coffee_varieties T1
 WHERE 
-    is_rust_resistant = TRUE;
+    T1.is_rust_resistant = TRUE;
 
 /*
   variety   | species |                             description

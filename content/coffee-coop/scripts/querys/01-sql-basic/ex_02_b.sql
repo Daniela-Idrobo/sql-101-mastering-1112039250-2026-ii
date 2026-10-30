@@ -2,16 +2,16 @@
 -- Coffee varieties: non-rust-resistant arabica varieties ordered by name descending
 
 SELECT
-    variety_name AS variety,
-    species,
-    description
+    T1.variety_name AS variety,
+    T1.species,
+    T1.description
 FROM 
-    farm.coffee_varieties
+    farm.coffee_varieties T1
 WHERE 
-    is_rust_resistant = FALSE
-    AND species = 'arabica'
+    T1.rust_resistant = FALSE
+    AND T1.species = 'arabica'
 ORDER BY 
-    variety_name DESC;
+    T1.variety_name DESC;
 
 /*
     variety    | species |                      description
