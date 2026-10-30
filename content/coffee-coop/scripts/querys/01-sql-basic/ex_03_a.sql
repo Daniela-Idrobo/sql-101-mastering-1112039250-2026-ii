@@ -2,13 +2,13 @@
 -- Certifications: name, issuer, and premium per kg ordered from highest to lowest
 
 SELECT
-    certification_name AS certification,
-    issuing_body AS issuer,
-    premium_per_kg AS premium_per_kg_cop
+    T1.certification_name AS certification,
+    T1.issuing_organization AS issuer,
+    T1.premium_per_kg AS premium_per_kg_cop
 FROM 
-    farm.certifications
+    farm.certifications T1
 ORDER BY 
-    premium_per_kg DESC;
+    T1.premium_per_kg DESC;
 
 /*
     certification    |              issuer               | premium_per_kg_cop

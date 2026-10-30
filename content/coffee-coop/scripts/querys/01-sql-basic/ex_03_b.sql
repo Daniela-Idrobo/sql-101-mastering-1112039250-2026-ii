@@ -2,14 +2,14 @@
 -- Certifications: premium per kg and calculated premium per load (125 kg)
 
 SELECT
-    certification_name AS certification,
-    issuing_body AS issuer,
-    premium_per_kg AS premium_per_kg_cop,
-    (premium_per_kg * 125) AS premium_per_load_cop
+    T1.certification_name AS certification,
+    T1.issuing_organization AS issuer,
+    T1.premium_per_kg AS premium_per_kg_cop,
+    (T1.premium_per_kg * 125) AS premium_per_load_cop
 FROM 
-    farm.certifications
+    farm.certifications T1
 ORDER BY 
-    premium_per_kg DESC;
+    T1.premium_per_kg DESC;
 
 /*
     certification    |              issuer               | premium_per_kg_cop | premium_per_load_cop
