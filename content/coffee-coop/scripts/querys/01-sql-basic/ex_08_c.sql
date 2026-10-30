@@ -2,21 +2,21 @@
 -- Deliveries: deliveries on Sept 30, 2026 with coffee type 'wet parchment' or 'cherry' using IN, ordered by gross weight descending
 
 SELECT
-    delivery_id,
-    farm_id,
-    collection_point_id,
-    delivered_at,
-    coffee_type,
-    bag_count,
-    gross_weight_kg,
-    status
+    T1.delivery_id,
+    T1.farm_id,
+    T1.collection_point_id,
+    T1.delivered_at,
+    T1.coffee_type,
+    T1.bag_count,
+    T1.gross_weight_kg,
+    T1.status
 FROM 
-    buy.deliveries
+    buy.deliveries T1
 WHERE 
-    delivery_id LIKE '%20260930%'
-    AND coffee_type IN ('wet parchment', 'cherry')
+    T1.delivery_id LIKE '%20260930%'
+    AND T1.coffee_type IN ('wet parchment', 'cherry')
 ORDER BY 
-    gross_weight_kg DESC;
+    T1.gross_weight_kg DESC;
  
 /*
      delivery_id     | farm_id | collection_point_id |    delivered_at     | coffee_type | bag_count | gross_weight_kg |  status

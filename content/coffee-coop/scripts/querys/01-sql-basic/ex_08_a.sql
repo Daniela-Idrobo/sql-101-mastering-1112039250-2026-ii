@@ -2,18 +2,18 @@
 -- Deliveries: delivery code, farm id, collection point id, reception time, coffee type, and gross weight for deliveries on Sept 30, 2026 using LIKE, ordered by reception time
 
 SELECT
-    delivery_id,
-    farm_id,
-    collection_point_id,
-    delivered_at,
-    coffee_type,
-    gross_weight_kg
+    T1.delivery_id,
+    T1.farm_id,
+    T1.collection_point_id,
+    T1.delivered_at,
+    T1.coffee_type,
+    T1.gross_weight_kg
 FROM 
-    buy.deliveries
+    buy.deliveries T1
 WHERE 
-    delivery_id LIKE '%20260930%'
+    T1.delivery_id LIKE '%20260930%'
 ORDER BY 
-    delivered_at ASC; 
+    T1.delivered_at;
 
 /*
      delivery_id     | farm_id | collection_point_id |    delivered_at     |  coffee_type  | gross_weight_kg
