@@ -16,6 +16,10 @@ WHERE
     AND deductions_amount = 0;
 
 /*
+la columna calculada y el gross_amount coinciden exactamente, porque el valor se calcula multiplicando el peso por el precio aplicado, y como la base de datos utiliza exactamente esa misma fórmula para llenar su columna generada, al hacer nosotros la multiplicación en la consulta, el resultado sale idéntico, demostrando que la lógica de la es clara, coherente y transparente.
+*/
+
+/*
     settlement_id    |     delivery_id     | net_weight_kg | price_per_kg_applied | gross_amount | deductions_amount | check gross cop
 ---------------------+---------------------+---------------+----------------------+--------------+-------------------+-----------------
  STL-20260930-000005 | DLV-20260927-000198 |        158.94 |             21608.00 |   3434375.52 |              0.00 |    3434375.5200
