@@ -2,13 +2,13 @@
 -- Collection points: name, address, and municipality code of inactive collection points
 
 SELECT
-    point_name AS point,
-    address_line AS address,
-    municipality_code
+    T1.collection_point_name AS point,
+    T1.address AS address,
+    T1.municipality_code
 FROM 
-    buy.collection_points
+    buy.collection_points T1
 WHERE 
-    is_active = FALSE;
+    T1.is_active = FALSE;
 
 /*
            point            |      address       | municipality_code
