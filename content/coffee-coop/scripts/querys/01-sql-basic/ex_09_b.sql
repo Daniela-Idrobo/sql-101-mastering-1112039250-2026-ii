@@ -2,18 +2,18 @@
 -- Quality analyses: analyses on Sept 30, 2026 with moisture outside the 10% - 12% range (NOT BETWEEN), including analyst name and observations
 
 SELECT
-    analysis_id,
-    delivery_id,
-    moisture_pct,
-    yield_factor,
-    cup_score,
-    analyst_name,
-    observations
+    T1.analysis_id,
+    T1.delivery_id,
+    T1.moisture_pct,
+    T1.yield_factor,
+    T1.cup_score,
+    T1.analyst_name,
+    T1.observations
 FROM 
-    buy.quality_analyses
+    buy.quality_analyses T1
 WHERE 
-    delivery_id LIKE '%20260930%'
-    AND moisture_pct NOT BETWEEN 10.0 AND 12.0;
+    T1.delivery_id LIKE '%20260930%'
+    AND T1.moisture_pct NOT BETWEEN 10.0 AND 12.0;
  
 /*
     analysis_id     |     delivery_id     | moisture_pct | yield_factor | cup_score |    analyst_name    |                          observations

@@ -2,20 +2,20 @@
 -- Quality analyses: unaccepted analyses on Sept 30, 2026 with registered observations, ordered by defect percentage descending
 
 SELECT
-    analysis_id,
-    delivery_id,
-    is_accepted,
-    defects_pct,
-    observations,
-    analyst_name
+    T1.analysis_id,
+    T1.delivery_id,
+    T1.is_accepted,
+    T1.defects_pct,
+    T1.observations,
+    T1.analyst_name
 FROM 
-    buy.quality_analyses
+    buy.quality_analyses T1
 WHERE 
-    delivery_id LIKE '%20260930%'
-    AND is_accepted = FALSE
-    AND observations IS NOT NULL
+    T1.delivery_id LIKE '%20260930%'
+    AND T1.is_accepted = FALSE
+    AND T1.observations IS NOT NULL
 ORDER BY 
-    defects_pct DESC;
+    T1.defects_pct DESC;
  
 /*
     analysis_id     |     delivery_id     | is_accepted | defects_pct |                observations                 |    analyst_name

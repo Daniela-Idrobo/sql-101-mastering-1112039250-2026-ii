@@ -2,18 +2,18 @@
 -- Quality analyses: analysis code, delivery, moisture pct, yield factor, and cup score for analyses on Sept 30, 2026 with cup score >= 85, ordered by cup score descending
 
 SELECT
-    analysis_id AS analysis,
-    delivery_id AS delivery,
-    moisture_pct,
-    yield_factor,
-    cup_score
+    T1.analysis_id AS analysis,
+    T1.delivery_id AS delivery,
+    T1.moisture_pct,
+    T1.yield_factor,
+    T1.cup_score
 FROM 
-    buy.quality_analyses
+    buy.quality_analyses T1
 WHERE 
-    delivery_id LIKE '%20260930%'
-    AND cup_score >= 85
+    T1.delivery_id LIKE '%20260930%'
+    AND T1.cup_score >= 85
 ORDER BY 
-    cup_score DESC;
+    T1.cup_score DESC;
  
 /*
       analysis      |      delivery       | moisture_pct | yield_factor | cup_score
