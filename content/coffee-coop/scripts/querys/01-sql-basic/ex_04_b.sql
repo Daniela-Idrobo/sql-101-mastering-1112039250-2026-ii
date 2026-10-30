@@ -2,15 +2,15 @@
 -- Municipalities: municipalities in Norte de Santander starting with 'San'
 
 SELECT
-    municipality_code,
-    municipality_name AS municipality
+    T1.municipality_code,
+    T1.municipality_name AS municipality
 FROM 
-    geo.municipalities 
+    geo.municipalities T1
 WHERE 
-    municipality_code LIKE '54%'
-    AND municipality_name LIKE 'San%'
+    T1.municipality_code LIKE '54%'
+    AND T1.municipality_name LIKE 'San%'
 ORDER BY 
-    municipality_name;
+    T1.municipality_name;
 
 /*
  municipality_code | municipality

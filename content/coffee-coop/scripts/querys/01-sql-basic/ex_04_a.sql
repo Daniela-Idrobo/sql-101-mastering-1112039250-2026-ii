@@ -2,14 +2,14 @@
 -- Municipalities: code and name of municipalities in Norte de Santander ordered alphabetically
 
 SELECT
-    municipality_code,
-    municipality_name AS municipality
+    T1.municipality_code,
+    T1.municipality_name AS municipality
 FROM 
-    geo.municipalities
+    geo.municipalities T1
 WHERE 
-    municipality_code LIKE '54%'
+    T1.municipality_code LIKE '54%'
 ORDER BY 
-    municipality_name;
+    T1.municipality_name;
 
 /*
  municipality_code |   municipality
@@ -24,35 +24,5 @@ ORDER BY
  54174             | Chitagá
  54206             | Convención
  54001             | Cúcuta
- 54223             | Cucutilla
- 54239             | Durania
- 54245             | El Carmen
- 54250             | El Tarra
- 54261             | El Zulia
- 54313             | Gramalote
- 54344             | Hacarí
- 54347             | Herrán
- 54385             | La Esperanza
- 54398             | La Playa
- 54377             | Labateca
- 54405             | Los Patios
- 54418             | Lourdes
- 54480             | Mutiscua
- 54498             | Ocaña
- 54518             | Pamplona
- 54520             | Pamplonita
- 54553             | Puerto Santander
- 54599             | Ragonvalia
- 54660             | Salazar
- 54670             | San Calixto
- 54673             | San Cayetano
- 54680             | Santiago
- 54720             | Sardinata
- 54743             | Silos
- 54800             | Teorama
- 54810             | Tibú
- 54820             | Toledo
- 54871             | Villa Caro
- 54874             | Villa Del Rosario
 (40 filas) 
 */

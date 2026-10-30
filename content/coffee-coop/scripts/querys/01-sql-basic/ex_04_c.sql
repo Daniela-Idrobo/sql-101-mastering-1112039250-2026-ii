@@ -2,14 +2,14 @@
 -- Municipalities: municipalities nationwide containing the word 'Pamplona' case-insensitively
 
 SELECT
-    municipality_code,
-    municipality_name AS municipality
+    T1.municipality_code,
+    T1.municipality_name AS municipality
 FROM 
-    geo.municipalities
+    geo.municipalities T1
 WHERE 
-    municipality_name ILIKE '%Pamplona%'
+    T1.municipality_name = 'Pamplona'
 ORDER BY 
-    municipality_name;
+    T1.municipality_name;
 
 /*
  municipality_code | municipality
