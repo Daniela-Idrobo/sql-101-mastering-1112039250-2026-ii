@@ -1,4 +1,4 @@
--- Exercise 0- - b
+-- Exercise 09 - b
 -- Quality analyses: analyses on Sept 30, 2026 with moisture outside the 10% - 12% range (NOT BETWEEN), including analyst name and observations
 
 SELECT
