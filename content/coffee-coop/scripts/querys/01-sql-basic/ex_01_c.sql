@@ -7,7 +7,7 @@ SELECT
 FROM 
     geo.departments T1
 ORDER BY 
-    department_name;
+    T1.department_name;
 
 /*
  code |                        department
