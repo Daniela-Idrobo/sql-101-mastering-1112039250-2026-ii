@@ -2,23 +2,23 @@
 -- Settlements: pending settlements on Sept 30, 2026, ordered by net amount descending
 
 SELECT
-    settlement_id,
-    delivery_id,
-    daily_price_id,
-    net_weight_kg,
-    price_per_kg_applied,
-    deductions_amount,
-    gross_amount,
-    net_amount,
-    settled_at,
-    status
+    T1.settlement_id,
+    T1.delivery_id,
+    T1.daily_price_id,
+    T1.net_weight_kg,
+    T1.price_per_kg_applied,
+    T1.deductions_amount,
+    T1.gross_amount,
+    T1.net_amount,
+    T1.settled_at,
+    T1.status
 FROM 
-    pay.settlements
+    pay.settlements T1
 WHERE 
-    settlement_id LIKE '%20260930%'
-    AND status = 'pending'
+    T1.settlement_id LIKE '%20260930%'
+    AND T1.status = 'pending'
 ORDER BY 
-    net_amount DESC;
+    T1.net_amount DESC;
 
 /*
     settlement_id    |     delivery_id     | daily_price_id | net_weight_kg | price_per_kg_applied | deductions_amount | gross_amount | net_amount |     settled_at      | status

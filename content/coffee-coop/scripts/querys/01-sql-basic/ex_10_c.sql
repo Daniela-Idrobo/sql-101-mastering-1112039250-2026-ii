@@ -2,18 +2,18 @@
 -- Settlements: settlements without deductions on Sept 30, 2026, with a calculated check for gross amount
 
 SELECT
-    settlement_id,
-    delivery_id,
-    net_weight_kg,
-    price_per_kg_applied,
-    gross_amount,
-    deductions_amount,
-    net_weight_kg * price_per_kg_applied AS "check gross cop"
+    T1.settlement_id,
+    T1.delivery_id,
+    T1.net_weight_kg,
+    T1.price_per_kg_applied,
+    T1.gross_amount,
+    T1.deductions_amount,
+    T1.net_weight_kg * T1.price_per_kg_applied AS "check gross cop"
 FROM 
-    pay.settlements
+    pay.settlements T1
 WHERE 
-    settlement_id LIKE '%20260930%'
-    AND deductions_amount = 0;
+    T1.settlement_id LIKE '%20260930%'
+    AND T1.deductions_amount = 0;
 
 /*
 la columna calculada y el gross_amount coinciden exactamente, porque el valor se calcula multiplicando el peso por el precio aplicado, y como la base de datos utiliza exactamente esa misma fórmula para llenar su columna generada, al hacer nosotros la multiplicación en la consulta, el resultado sale idéntico, demostrando que la lógica de la es clara, coherente y transparente.
