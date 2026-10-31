@@ -2,7 +2,7 @@
 -- Municipalities: municipality code, municipality name, and department name for municipalities in Norte de Santander (department code 54)
 
 SELECT 
-    T1.municipality_code AS municipality_code,
+    T1.municipality_code,
     T1.municipality_name AS municipality,
     T2.department_name AS department
 FROM geo.municipalities T1

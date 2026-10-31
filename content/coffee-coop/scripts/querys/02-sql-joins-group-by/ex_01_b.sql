@@ -3,10 +3,10 @@
 
 SELECT 
     T1.farm_name AS farm,
-    T1.rural_district AS rural_district,
+    T1.rural_district,
     T2.municipality_name AS municipality,
-    T3.first_name AS first_name,
-    T3.last_name AS last_name
+    T3.first_name,
+    T3.last_name
 FROM farm.farms T1
 INNER JOIN geo.municipalities T2 
     ON T1.municipality_code = T2.municipality_code

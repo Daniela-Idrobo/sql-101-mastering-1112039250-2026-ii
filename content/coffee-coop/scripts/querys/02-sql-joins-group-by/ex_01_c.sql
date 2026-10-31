@@ -5,7 +5,7 @@ SELECT
     T1.delivery_id AS delivery,
     T2.farm_name AS farm,
     T3.point_name AS collection_point,
-    T1.gross_weight_kg AS gross_weight_kg
+    T1.gross_weight_kg
 FROM buy.deliveries T1
 INNER JOIN farm.farms T2 
     ON T1.farm_id = T2.farm_id
