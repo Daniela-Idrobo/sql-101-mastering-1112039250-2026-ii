@@ -11,6 +11,15 @@ RIGHT JOIN buy.collection_points T2
    AND T1.delivery_id LIKE '%20260930%';
 
 /*
+En esta consulta se utiliza la condición de fecha dentro del ON del RIGHT JOIN para preservar 
+la inclusión de todos los puntos de compra de la tabla derecha (buy.collection_points), 
+registren o no entregas el 30 de septiembre de 2026; si dicha condición se ubicara en la 
+cláusula WHERE, evaluaría las entregas no encontradas como nulas (NULL), eliminándolas del 
+resultado y transformando lógicamente la consulta en un INNER JOIN que ocultaría los puntos 
+sin actividad ese día.
+*/
+
+/*
                collection_point               |      delivery       | gross_weight_kg
 ----------------------------------------------+---------------------+-----------------
  Punto de Compra Salgar 1                     | DLV-20260930-000002 |          124.98
