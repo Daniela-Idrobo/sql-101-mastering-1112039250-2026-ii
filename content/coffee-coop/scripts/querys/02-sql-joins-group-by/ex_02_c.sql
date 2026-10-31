@@ -4,7 +4,7 @@
 SELECT 
     T1.delivery_id AS delivery,
     T2.analysis_id AS analysis,
-    T2.cup_score
+    T2.cup_scoregit 
 FROM buy.deliveries T1
 LEFT JOIN buy.quality_analyses T2 
     ON T1.delivery_id = T2.delivery_id
