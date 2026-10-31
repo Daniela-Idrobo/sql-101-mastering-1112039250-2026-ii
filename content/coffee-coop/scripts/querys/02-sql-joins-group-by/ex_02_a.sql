@@ -3,8 +3,8 @@
 
 SELECT 
     T1.document_number AS document,
-    T1.first_name AS first_name,
-    T1.last_name AS last_name,
+    T1.first_name,
+    T1.last_name,
     T2.farm_name AS farm
 FROM farm.farmers T1
 LEFT JOIN farm.farms T2 
