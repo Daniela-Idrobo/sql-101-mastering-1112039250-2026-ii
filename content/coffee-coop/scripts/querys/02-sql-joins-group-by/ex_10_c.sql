@@ -15,6 +15,13 @@ HAVING COUNT(T2.farm_id) >= 5
 ORDER BY avg_altitude_masl DESC;
 
 /*
+El código del departamento va en el WHERE porque revisa y limpia los 
+datos fila por fila antes de juntarlos, mientras que la cuenta de 
+fincas va en el HAVING porque esa suma solo se puede revisar después 
+de armar los grupos por municipio.
+*/
+
+/*
    municipality    | farms_count | total_area_ha | avg_altitude_masl
 -------------------+-------------+---------------+-------------------
  Ragonvalia        |         377 |        990.30 |           1688.35
