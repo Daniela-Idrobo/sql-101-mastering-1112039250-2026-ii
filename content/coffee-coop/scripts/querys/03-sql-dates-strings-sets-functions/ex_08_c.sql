@@ -24,6 +24,16 @@ WHERE T3.municipality_code = '54518'
 ORDER BY farm ASC, rural_district ASC;
 
 /*
+Si se invierte el orden de las consultas en el operador EXCEPT, la lógica 
+cambia por completo: en lugar de mostrar las fincas que entregaron café 
+en 2025 pero que no lo hicieron en 2026, la consulta arrojaría las fincas 
+que entregaron café en 2026 pero que no tuvieron entregas en 2025, 
+alterando el conjunto base evaluado y reflejando un filtro opuesto 
+orientado a identificar nuevos productores o reactivaciones en lugar de 
+deserciones.
+*/
+
+/*
      farm      |    rural_district
 ---------------+----------------------
  Agua Bonita   | García
