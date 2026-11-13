@@ -52,6 +52,15 @@ WHERE T4.department_code = '54'
 ORDER BY municipality_code;
 
 /*
+Al ejecutar la consulta utilizando UNION, el resultado devuelve un número 
+menor de filas porque elimina automáticamente todos los registros duplicados 
+cuando un municipio aparece tanto en la tabla de asociados como en la de 
+fincas, mientras que la versión con UNION ALL conserva absolutamente todas 
+las filas y repeticiones sin filtrar, arrojando un conteo mayor debido a que 
+incluye cada coincidencia de manera independiente en ambos conjuntos.
+*/
+
+/*
  municipality_code
 -------------------
  54001
